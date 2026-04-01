@@ -13,7 +13,7 @@
 
 ## 📝 更新日志
 
-### 2024-03-26
+### 2026-03-26
 - ✨ 初始版本发布
 - ✅ 实时出勤监控模块
 - ✅ 运单数据分析模块
@@ -24,7 +24,7 @@
 
 ## 💬 关于项目
 
-本项目为饿了么运营团队提供数据清洗和分析工具，帮助提升排班管理效率。
+本项目为物流代理商运营团队提供数据清洗和分析工具，帮助提升排班管理效率。
 
 - **GitHub**: https://github.com/347Goodnight/fengshen-dashboard
 - **在线体验**: https://fengshen-dashboard-dfgqcfwqg8nsnh6kvaufmn.streamlit.app/
