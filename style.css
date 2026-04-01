@@ -1,0 +1,247 @@
+/* ========== 全局字体与背景 ========== */
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    background-color: #f8fafc;
+}
+
+/* ========== 主标题样式 ========== */
+h1 {
+    color: #0a2c4a;
+    border-bottom: 3px solid #3182ce;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+h2, h3 {
+    color: #1a4d80;
+}
+
+/* ========== 指标卡片美化 ========== */
+div[data-testid="stMetric"] {
+    background-color: white;
+    border-radius: 16px;
+    padding: 15px 10px;
+    box-shadow: 0 4px 12px rgba(0,30,60,0.08);
+    border: 1px solid #e2edf7;
+    transition: transform 0.2s;
+}
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,50,100,0.12);
+}
+
+/* ========== 表格美化与居中对齐 ========== */
+.stDataFrame table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+.stDataFrame thead tr th {
+    background-color: #e8f0fa;
+    color: #113355;
+    font-weight: 600;
+    padding: 12px 8px;
+}
+.stDataFrame tbody tr:nth-child(even) {
+    background-color: #f9fcff;
+}
+.stDataFrame tbody tr:hover {
+    background-color: #e3f0ff;
+}
+/* 强制所有表格单元格居中对齐 */
+.stDataFrame table td,
+.stDataFrame table th,
+.stDataFrame thead tr th,
+.stDataFrame tbody tr td,
+table.dataframe,
+table.dataframe td,
+table.dataframe th,
+div[data-testid="stDataFrame"] table,
+div[data-testid="stDataFrame"] table td,
+div[data-testid="stDataFrame"] table th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+td.number,
+th.col_heading {
+    text-align: center !important;
+}
+
+/* ========== 标签页美化 ========== */
+button[data-baseweb="tab"] {
+    font-weight: 500;
+    color: #3a5e7a;
+}
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #1a4d80;
+    border-bottom-color: #1a4d80 !important;
+}
+
+/* ========== 侧边栏整体优化 ========== */
+section[data-testid="stSidebar"] {
+    background-color: #f1f7fd;
+    border-right: 1px solid #cbddee;
+    padding-top: 20px;
+    min-width: 380px !important;
+    max-width: 480px;
+    overflow-x: hidden;
+}
+
+/* ========== 多选框（站点选择）终极优化（增强对比度） ========== */
+div[data-testid="stMultiSelect"] {
+    width: 100% !important;
+    margin-bottom: 15px;
+}
+
+/* 已选标签容器（包裹所有已选标签）添加滚动条 */
+div[data-testid="stMultiSelect"] div[data-baseweb="select"] > div {
+    max-height: 200px !important;
+    overflow-y: auto !important;
+    flex-wrap: wrap !important;
+    height: auto !important;
+    padding: 4px !important;
+    border: 1px solid #cbddee;
+    border-radius: 8px;
+}
+
+/* 单个已选标签样式（自动换行，加深文字颜色） */
+div[data-testid="stMultiSelect"] span[data-baseweb="tag"] {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 32px !important;
+    line-height: 1.4 !important;
+    padding: 6px 10px !important;
+    margin: 2px 2px !important;
+    font-size: 14px !important;
+    background-color: #d9e6f2;      /* 略深的浅蓝色，提高对比度 */
+    color: #0a2c4a !important;       /* 深蓝文字，更清晰 */
+    border-radius: 16px;
+    font-weight: 500;
+}
+
+/* 已选标签内的文字（确保颜色继承） */
+div[data-testid="stMultiSelect"] span[data-baseweb="tag"] span {
+    white-space: normal !important;
+    word-break: break-word !important;
+    color: inherit !important;
+}
+
+/* 已选标签中的删除按钮（x）颜色 */
+div[data-testid="stMultiSelect"] span[data-baseweb="tag"] svg {
+    fill: #1a4d80 !important;        /* 深蓝色，与文字协调 */
+}
+
+/* 下拉选项列表容器 */
+div[data-testid="stMultiSelect"] ul[role="listbox"] {
+    background-color: white !important;
+    border: 1px solid #cbddee !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,30,60,0.15) !important;
+}
+
+/* 下拉选项列表中的每个选项（增强对比度） */
+div[data-testid="stMultiSelect"] ul[role="listbox"] li {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.4 !important;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    color: #0a2c4a !important;       /* 深色文字 */
+    background-color: white !important;
+    border-bottom: 1px solid #e2edf7;
+}
+div[data-testid="stMultiSelect"] ul[role="listbox"] li:hover {
+    background-color: #e8f0fa !important; /* 浅蓝悬停 */
+    color: #0a2c4a !important;
+}
+div[data-testid="stMultiSelect"] ul[role="listbox"] li[aria-selected="true"] {
+    background-color: #d0e2f5 !important;
+    color: #0a2c4a !important;
+}
+
+/* 多选框输入框本身 */
+div[data-testid="stMultiSelect"] div[data-baseweb="select"] {
+    height: auto !important;
+    border: 1px solid #cbddee;
+    border-radius: 8px;
+}
+
+/* ========== 按钮样式（红色系） ========== */
+.stButton > button {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: 0.2s;
+    border: 1px solid #922b21;
+}
+.stButton > button:hover {
+    background: linear-gradient(135deg, #a93226, #7b241c);
+    box-shadow: 0 5px 15px rgba(192,57,43,0.3);
+}
+
+/* ========== 图表背景透明 ========== */
+.js-plotly-plot .plotly .main-svg {
+    background: transparent !important;
+}
+
+/* ========== 异常监控标记列特殊样式（让符号更大） ========== */
+td:last-child {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* ========== 分割线样式 ========== */
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #3182ce, transparent);
+    margin: 30px 0;
+}
+
+/* ========== 信息提示框样式 ========== */
+.stAlert {
+    border-radius: 30px;
+    border-left: 5px solid #3182ce;
+}
+
+/* ========== 固定筛选模块 ========== */
+.sticky-filter {
+    position: sticky;
+    top: 0;
+    background-color: #f8fafc;
+    z-index: 100;
+    padding: 10px 0;
+    border-bottom: 2px solid #3182ce;
+    box-shadow: 0 4px 8px rgba(0,30,60,0.08);
+    margin-bottom: 20px;
+}
+
+/* 限制筛选模块中多选框的宽度，使其更紧凑 */
+.sticky-filter .stMultiSelect {
+    max-width: 220px;      /* 缩小宽度，让布局更紧凑 */
+    width: 100%;
+}
+
+/* 调整列之间的间距，默认Streamlit列有间距，这里通过设置padding减小间距 */
+.sticky-filter .stColumns {
+    gap: 0.5rem;            /* 减小列间距 */
+}
+
+/* 筛选模块内部标题 */
+.sticky-filter h4, .sticky-filter .stMarkdown {
+    margin-bottom: 5px;
+}
+
+/* 确保每列内的多选框宽度自适应 */
+.sticky-filter .stColumns > div {
+    padding: 0 4px;         /* 缩小内边距 */
+}
